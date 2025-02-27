@@ -54,3 +54,5 @@ D:\linux programas e trabalhos\OneDrive-2023-03-11\kickboxer_api\KickboxerApi\bi
 D:\linux programas e trabalhos\OneDrive-2023-03-11\kickboxer_api\KickboxerApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Annotations.dll
 D:\linux programas e trabalhos\OneDrive-2023-03-11\kickboxer_api\KickboxerApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\linux programas e trabalhos\OneDrive-2023-03-11\kickboxer_api\KickboxerApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\linux programas e trabalhos\OneDrive-2023-03-11\kickboxer_api\KickboxerApi\obj\Debug\net9.0\KickboxerApi.sourcelink.json
+D:\linux programas e trabalhos\OneDrive-2023-03-11\kickboxer_api\KickboxerApi\bin\Debug\net9.0\BCrypt.Net-Next.dll

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KickboxerApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2026af358b9abf381a00423d4d9781ca493a268a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3bbb4939ae9deb667090d4bbe2499b12343aa633")]
 [assembly: System.Reflection.AssemblyProductAttribute("KickboxerApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KickboxerApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

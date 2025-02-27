@@ -25,19 +25,14 @@ namespace KickboxerApi.Controllers
         {
             try
             {
-                var user = new User
-                {
-                    Name = newUser.Name,
-                    Email = newUser.Email,
-                    Password = newUser.Password
-                };
-                await _usersService.Post(user);
 
-                return StatusCode(201, newUser); ;
+                await _usersService.Post(newUser);
+
+                return StatusCode(201, new { newUser, message = "Usuário criado com sucesso" }); ;
             }
-            catch (System.Exception)
+            catch (Exception ex)
             {
-                return BadRequest();
+                return BadRequest(new { message = ex.Message });
             }
         }
 
@@ -52,7 +47,7 @@ namespace KickboxerApi.Controllers
             catch (Exception ex)
             {
 
-                return BadRequest(ex.Message);
+                return BadRequest(new { message = ex.Message });
             }
         }
     }

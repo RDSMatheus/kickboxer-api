@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kEUBi6Gx89A=",
+  "dgSpecHash": "IYcPz1BSPHA=",
   "success": true,
   "projectFilePath": "D:\\linux programas e trabalhos\\OneDrive-2023-03-11\\kickboxer_api\\KickboxerApi\\KickboxerApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mathe\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\mathe\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\mathe\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0\\microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
     "C:\\Users\\mathe\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.2\\microsoft.entityframeworkcore.9.0.2.nupkg.sha512",
