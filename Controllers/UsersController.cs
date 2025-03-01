@@ -50,5 +50,35 @@ namespace KickboxerApi.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
+
+        [HttpPut("id")]
+        public async Task<ActionResult> Update(string id, [FromBody] UserUpdateDto updatedUser)
+        {
+            try
+            {
+                await _usersService.Update(id, updatedUser);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpDelete("id")]
+        public async Task<ActionResult> Delete(string id)
+        {
+            try
+            {
+                await _usersService.Delete(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(new { message = ex.Message });
+            }
+        }
     }
 }

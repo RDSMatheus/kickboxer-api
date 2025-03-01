@@ -40,7 +40,31 @@ namespace KickboxerApi.Services
 
         async public Task<User> GetById(string id)
         {
+            if (string.IsNullOrEmpty(id))
+            {
+                throw new Exception("Envie um id válido.");
+            }
             return await _userRepository.GetById(id);
+        }
+
+        async public Task Update(string id, UserUpdateDto updatedUser)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                throw new Exception("Envie um id válido.");
+            }
+            await _userRepository.Update(id, updatedUser);
+
+            var user = await _userRepository.Delete(id) ?? throw new Exception("Usuário não encontrado.");
+        }
+
+        async public Task Delete(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                throw new Exception("Envie um id válido.");
+            }
+            var user = await _userRepository.Delete(id) ?? throw new Exception("Usuário não encontrado.");
         }
     }
 }
