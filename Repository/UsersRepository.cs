@@ -17,6 +17,7 @@ namespace KickboxerApi.Repository
 
         public UsersRepository(IOptions<KickboxerDatabaseSettings> kickboxerDatabaseSettings)
         {
+            Console.WriteLine($"VideosCollectionName: {kickboxerDatabaseSettings.Value.UsersCollectionName}");
             var mongoClient = new MongoClient(kickboxerDatabaseSettings.Value.ConnectionString);
             var mongoDatabase = mongoClient.GetDatabase(kickboxerDatabaseSettings.Value.DatabaseName);
             _usersCollection = mongoDatabase.GetCollection<User>(kickboxerDatabaseSettings.Value.UsersCollectionName);
@@ -34,9 +35,9 @@ namespace KickboxerApi.Repository
             return new UserResponseDto { Exists = false, Message = "Usuário cadastrado com sucesso." };
         }
 
-        public async Task<User> GetById(string id)
+        public async Task<User> GetByEmail(string email)
         {
-            var user = await _usersCollection.AsQueryable().Where(i => i.Id == id).FirstOrDefaultAsync();
+            var user = await _usersCollection.AsQueryable().Where(i => i.Email == email).FirstOrDefaultAsync();
             return user;
         }
 

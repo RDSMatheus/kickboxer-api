@@ -9,10 +9,12 @@ namespace KickboxerApi.Services
     public class UsersService
     {
         private readonly UsersRepository _userRepository;
+        
         public UsersService(UsersRepository usersRepository)
         {
             _userRepository = usersRepository;
         }
+
 
         async public Task<string> Post(UserDto newUser)
         {
@@ -38,13 +40,13 @@ namespace KickboxerApi.Services
             return response.Message;
         }
 
-        async public Task<User> GetById(string id)
+        async public Task<User> GetByEmail(string email)
         {
-            if (string.IsNullOrEmpty(id))
+            if (string.IsNullOrEmpty(email))
             {
-                throw new Exception("Envie um id válido.");
+                throw new Exception("Envie um email válido.");
             }
-            return await _userRepository.GetById(id);
+            return await _userRepository.GetByEmail(email);
         }
 
         async public Task Update(string id, UserUpdateDto updatedUser)

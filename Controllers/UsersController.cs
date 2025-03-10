@@ -36,12 +36,12 @@ namespace KickboxerApi.Controllers
             }
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetById(string id)
+        [HttpGet("{email}")]
+        public async Task<ActionResult<User>> GetByEmail(string email)
         {
             try
             {
-                var user = await _usersService.GetById(id);
+                var user = await _usersService.GetByEmail(email);
                 return Ok(user);
             }
             catch (Exception ex)
